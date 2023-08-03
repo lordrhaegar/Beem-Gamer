@@ -4,27 +4,19 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
-  ScrollView,
-  FlatList,
+  ScrollView
 } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import { RendezVerse, profileImage, searchImage } from "../assets";
 import { useState } from "react/cjs/react.development";
 import { ActivityIndicator } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
-// import apiFetch from "../hooks/apiFetch";
 import VirtualHotelCard from "./VirtualHotel";
 import * as Animatable from 'react-native-animatable';
 const Discover = () => {
-  //   const [isLoading, setIsLoading] = useState(true);
   const [category, setCategory] = useState("");
-
-  //
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  //   const [error, setError] = useState(null);
   let apiFetch = () => {
     setIsLoading(true);
     const url = `https://www.freetogame.com/api/games?category=${category}`;

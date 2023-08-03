@@ -3,11 +3,8 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
 const openLink = async (url) => {
-    // Checking if the device supports opening URLs
     const supported = await Linking.canOpenURL(url);
-  
     if (supported) {
-      // Opening the URL in the browser
       await Linking.openURL(url);
     } else {
       console.log("Don't know how to open URL: ", url);
@@ -19,7 +16,6 @@ openLink(theUrl);
 const screenWidth = Dimensions.get('window').width; 
 const GameData = ({route}) => {
     const info = route?.params?.param;
-    // console.log(info);  
   return (
     <SafeAreaView>
     <View
