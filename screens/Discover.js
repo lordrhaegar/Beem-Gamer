@@ -85,7 +85,7 @@ const Discover = () => {
           </View>
         </View>
         <View>
-          <Animatable.View className="flex-row rounded-md space-x-2 bg-white shadow-2xl px-2 h-[200px] items-center justify-center"
+          <Animatable.View className="flex-row rounded-md space-x-2 items-center justify-center"
           animation="fadeInUp"
           easing="ease-in-out"
           >
@@ -93,7 +93,7 @@ const Discover = () => {
               style={{fontFamily:"Or"}}
               onChangeText={setCategory}
               placeholder="Enter Game Category"
-              className="flex px-4 py-3 shadow-lg bg-gray-100 w-[80%] rounded-md"
+              className="flex px-4 py-3 shadow-lg bg-white w-[83%] rounded-md"
             ></TextInput>
             <TouchableOpacity className=" flex py-3 items-center shadow-lg bg-black rounded-md w-[15%]"
 
