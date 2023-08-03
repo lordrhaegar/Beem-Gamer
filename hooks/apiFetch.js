@@ -12,17 +12,13 @@ try {
 	const result = await response.json();
     setData(result)
 	setIsLoading(false);
-	// console.log(result);
 } catch (error) {
     setError(error);
 	console.error(error);
     return null;
 }
 }
-
-
-    makeRequest()
-
+makeRequest();
 return {data,isLoading,error};
 }
 export default apiFetch;
